@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -27,8 +31,9 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 30px;
+  overflow: hidden;
 }
 
 h1 {
@@ -37,7 +42,6 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -55,21 +59,38 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-#editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+pre {
+  white-space: pre-wrap;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0 30px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.playground {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1em;
+}
+
+.border-options {
+  display: flex;
+  align-items: cente;
+  gap: 4px;
+  margin-left: 30px;
+}
+
+/* iframe 
+{ "width": "70%", height: "70vh", overflow: "auto" 
+} */
+
+input {
+  border: 1px solid #646cff;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #646cff;
+  transition: border-color 0.25s;
 }
