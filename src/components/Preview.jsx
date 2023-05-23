@@ -24,7 +24,7 @@ const Preview = ({ JS, CSS, HTML }) => {
 
   useEffect(() => {
     update() 
-  }, [iframeRef, JS, CSS, HTML])
+  }, [])
 
 
   return (

@@ -28,13 +28,13 @@ export function clearPreview () {
   previewUrl = null
 }
 
-export function showPreviewerWindow () {
-  const previewWindow = window.open(previewUrl, '_blank')
+// export function showPreviewerWindow () {
+//   const previewWindow = window.open(previewUrl, '_blank')
 
-  // Use a WeafRef so when the user closes the window it could be garbage collected.
-  // We need to hold a reference so we can update the location of the window when
-  // the pewview changes.
-  previewWindowRef = new window.WeakRef(previewWindow)
-  const title = `${document.title} | Preview`
-  previewWindow.document.title = title
-}
+//   // Use a WeafRef so when the user closes the window it could be garbage collected.
+//   // We need to hold a reference so we can update the location of the window when
+//   // the pewview changes.
+//   previewWindowRef = new window.WeakRef(previewWindow)
+//   const title = `${document.title} | Preview`
+//   previewWindow.document.title = title
+// }
